@@ -1,0 +1,53 @@
+---
+import projects from "@/data/projects.json";
+import Arrow from "@/icons/Arrow.astro";
+---
+
+<section class="mt-10 md:mt-0 mb-10">
+  <h2 class="mb-2 text-lg font-bold">Proyectos</h2>
+  <div class="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+    {
+      projects.map(({ name, content, status, url, tech }, index) => {
+        if (index > 5) return;
+        let statusColor =
+          "bg-gray-500/10 border-gray-500 border-dashed border-2";
+        if (status === "completado") {
+          statusColor =
+            "bg-green-500/10 border-green-500 border-dashed border-2";
+        } else if (status === "progreso") {
+          statusColor =
+            "bg-yellow-500/10 border-yellow-500 border-dashed border-2";
+        } else if (status === "pausa") {
+          statusColor = "bg-red-500/10 border-red-500  border-dashed border-2";
+        }
+        return (
+          <div class="p-4 transition-colors border border-dashed rounded cursor-pointer hover:bg-neutral-700/20 border-neutral-700">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span
+                  class={`${statusColor} size-4 rounded-full inline-block`}
+                />
+                <a class="font-semibold hover:underline">{name}</a>
+              </div>
+              <a
+                href={url}
+                target="_blank"
+                class="transition-transform rotate-45 hover:scale-125 text-neutral-500 hover:text-white"
+              >
+                <Arrow />
+              </a>
+            </div>
+            <p class="mt-2 text-sm text-neutral-500">{content}</p>
+            <div class="flex-wrap items-center hidden gap-1 mt-2 sm:flex">
+              {tech.map((technology) => (
+                <span class="px-1 p-0.5 text-xs text-neutral-400 rounded bg-neutral-700">
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

@@ -1,0 +1,25 @@
+[
+    {
+        "name": "NxGo Notes",
+        "content": "Una mejor experiencia al gestionar tus notas.",
+        "status": "progreso",
+        "url": "",
+        "tech": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind",
+            "NextAuth.js"
+        ]
+    },
+    {
+        "name": "DevToolKit",
+        "content": "Recursos que te ayudarán al momento de desarrollar tu proyecto web.",
+        "status": "completado",
+        "url": "",
+        "tech": [
+            "Next.js",
+            "Tailwind",
+            "NextAuth.js"
+        ]
+    }
+]

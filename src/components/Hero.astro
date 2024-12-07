@@ -1,0 +1,84 @@
+---
+import Discord from "@/icons/Discord.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Instagram from "@/icons/Instagram.astro";
+import X from "@/icons/X.astro";
+import yxsifdevAv from "@/images/yxsifdev.webp";
+---
+
+<section>
+  <div class="flex items-start justify-between gap-4">
+    <div class="max-w-2xl space-y-5">
+      <div class="mb-10">
+        <h1 class="text-lg font-bold">Hola, soy yxsifdev</h1>
+        <p class="mb-2 text-sm text-neutral-500">
+          Miembro de <a
+            href="https://tool-cord.vercel.app"
+            target="_blank"
+            class="text-white hover:underline">NxGo</a
+          > y creador de la comunidad de desarrollado web <a
+            href="https://quantumdev.pages.dev"
+            target="_blank"
+            class="text-white hover:underline">Quantum</a
+          >.
+        </p>
+        <div>
+          <span
+            class="px-1 py-0.5 text-neutral-400 text-xs bg-neutral-700 rounded"
+            >🌎 Perú, Lima
+          </span>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold">Sobre mí</h2>
+        <p class="text-sm text-neutral-500">
+          Cuento con más de 2 años de experiencia como <strong
+            class="text-white">Desarrollador Frontend</strong
+          >. Actualmente me encuentro siguiendo mi carrera de <strong
+            class="text-white">Desarrollo de Software</strong
+          >. Busco seguir perfeccionando mis habilidades en el mundo de la
+          tecnología.
+        </p>
+      </div>
+    </div>
+    <div class="flex-col hidden mb-10 md:flex gap-y-2">
+      <img
+        src={yxsifdevAv.src}
+        alt="yxsifdev"
+        width="160"
+        height="160"
+        class="rounded-lg min-w-[160px] min-h-[160px]"
+      />
+      <span
+        class="text-xs text-center text-white border border-purple-500 border-dashed rounded px-2 py-0.5 hover:bg-purple-500/30 cursor-pointer transition-colors bg-purple-500/10"
+        >FrontEnd Developer</span
+      >
+      <div class="flex justify-between">
+        <a
+          href="https://discord.com"
+          class="inline-flex items-center p-1 transition-colors border border-dashed rounded cursor-pointer border-neutral-700 hover:bg-neutral-700/20"
+          ><Discord class="size-5" />
+        </a>
+        <a
+          href="https://github.com/yxsifdev"
+          target="_blank"
+          class="inline-flex items-center p-1 transition-colors border border-dashed rounded cursor-pointer border-neutral-700 hover:bg-neutral-700/20"
+          ><GitHub class="size-5" /></a
+        >
+        <a
+          href="https://instagram.com/yxsif.dev"
+          target="_blank"
+          class="inline-flex items-center p-1 transition-colors border border-dashed rounded cursor-pointer border-neutral-700 hover:bg-neutral-700/20"
+          ><Instagram class="size-5" /></a
+        >
+        <a
+          href="https://x.com/yxsifdev"
+          target="_blank"
+          class="inline-flex items-center p-1 transition-colors border border-dashed rounded cursor-pointer border-neutral-700 hover:bg-neutral-700/20"
+        >
+          <X class="size-5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
